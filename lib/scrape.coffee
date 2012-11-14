@@ -189,5 +189,6 @@ module.exports = {
     domParse
     elToString
     executeXPath
+    executeCSSQuery
     main
 }
