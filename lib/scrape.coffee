@@ -41,7 +41,7 @@ useXPath = (query) ->
 getArgs = ->
     optimist = require 'optimist'
     argv = optimist
-        .usage('Usage: $0 [url] [xpath|css]')
+        .usage('Usage: scrape [url] [xpath|css]')
         .alias('l', 'loglevel')
         .default('l', 'silent')
         .demand(2)

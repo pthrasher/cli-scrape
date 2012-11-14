@@ -68,6 +68,6 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('test', 'lint jasmine_node');
-    grunt.registerTask('dist', 'coffee concat test');
+    grunt.registerTask('dist', 'coffee concat');
     grunt.registerTask('default', 'dist test');
 };
