@@ -1,4 +1,4 @@
-#    cli-scrape 0.1.2
+#    cli-scrape
 #
 #    (c) 2012 Philip Thrasher
 #
@@ -41,7 +41,7 @@ useXPath = (query) ->
 getArgs = ->
     optimist = require 'optimist'
     argv = optimist
-        .usage('Usage: $0 [url] [xpath|css]')
+        .usage('Usage: scrape [url] [xpath|css]')
         .alias('l', 'loglevel')
         .default('l', 'silent')
         .demand(2)
@@ -135,8 +135,8 @@ executeCSSQuery = (query, window) ->
 # Main
 # ====
 #
-# This is executed by the binary.
-main = ->
+# Only run if we're executed directly.
+if require.main == module
     # Get the args
     { url, query, loglevel } = getArgs()
     # Set our default logging level, only log items at this level and higher.
@@ -189,5 +189,5 @@ module.exports = {
     domParse
     elToString
     executeXPath
-    main
+    executeCSSQuery
 }

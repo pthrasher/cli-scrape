@@ -3,10 +3,20 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-jasmine-node');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-bump');
 
     // Project configuration.
     grunt.initConfig({
         pkg: '<json:package.json>',
+        meta: {
+            banner: '#!/usr/bin/env node'
+        },
+        concat: {
+            dist: {
+                src: ['<banner>', '<file_strip_banner:lib/scrape.js>'],
+                dest: 'lib/scrape.js'
+            }
+        },
         jasmine_node: {
             projectRoot: "./spec",
             requirejs: false,
@@ -28,6 +38,9 @@ module.exports = function(grunt) {
         },
         coffee: {
             compile: {
+                options: {
+                    bare: true
+                },
                 files: {
                     'lib/scrape.js': 'lib/scrape.coffee'
                 }
@@ -55,5 +68,6 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('test', 'lint jasmine_node');
-    grunt.registerTask('default', 'coffee test');
+    grunt.registerTask('dist', 'coffee concat');
+    grunt.registerTask('default', 'dist test');
 };
