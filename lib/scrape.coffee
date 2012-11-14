@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-#    cli-scrape 0.1.7
+#    cli-scrape
 #
 #    (c) 2012 Philip Thrasher
 #
