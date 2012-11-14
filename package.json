@@ -35,19 +35,20 @@
     "coffee-script": "~1.4.0"
   },
   "keywords": [
-      "scrape",
-      "scraper",
-      "scraping",
-      "jquery",
-      "qwery",
-      "css",
-      "selector",
-      "xpath"
+    "scrape",
+    "scraper",
+    "scraping",
+    "jquery",
+    "qwery",
+    "css",
+    "selector",
+    "xpath"
   ],
   "dependencies": {
     "optimist": "~0.3.5",
     "request": "~2.12.0",
-    "jsdom": "~0.2.19"
+    "jsdom": "~0.2.19",
+    "npmlog": "0.0.2"
   },
   "preferGlobal": true
 }
