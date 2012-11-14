@@ -14,7 +14,11 @@ scrape.awesome(); // "awesome"
 _(Coming soon)_
 
 ## Examples
-_(Coming soon)_
+
+```
+$ scrape http://whatthecommit.com/ '//p[0]/text()'
+$ scrape http://whatthecommit.com/ 'p:first-child'
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
