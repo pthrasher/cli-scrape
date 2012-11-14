@@ -1,4 +1,4 @@
-scrape = require 'lib/scrape'
+scrape = require '../lib/scrape'
 
 describe 'The source file', ->
     it 'has a function named useXPath', ->
