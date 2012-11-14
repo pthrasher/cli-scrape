@@ -1,7 +1,7 @@
 {
   "name": "cli-scrape",
   "description": "screen scrape from command line with xpath or css selectors",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/pthrasher/scrape",
   "author": {
     "name": "Philip Thrasher",
@@ -25,7 +25,7 @@
     "node": ">= 0.6.0"
   },
   "scripts": {
-    "test": "grunt jasmine_node"
+    "test": "grunt test"
   },
   "devDependencies": {
     "grunt": "~0.3.17",
