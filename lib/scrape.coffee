@@ -1,11 +1,11 @@
-#   cli-scrape 0.1.2
+#    cli-scrape 0.1.2
 #
-#   (c) 2012 Philip Thrasher
+#    (c) 2012 Philip Thrasher
 #
-#   cli-scrape may be freely distributed under the MIT license.
-#   For all details and documentation:
+#    cli-scrape may be freely distributed under the MIT license.
+#    For all details and documentation:
 #
-#   http://pthrasher.github.com/cli-scrape/
+#    http://pthrasher.github.com/cli-scrape/
 
 # Usage
 # -----
@@ -14,7 +14,7 @@
 #
 # `scrape http://whatthecommit.com/ '//p[0]'`
 
-# word.
+# use strict, yo!
 'use strict'
 
 request  = require 'request'

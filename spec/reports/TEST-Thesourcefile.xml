@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-<testsuite name="The source file" errors="0" tests="7" failures="0" time="0.004" timestamp="2012-11-14T16:22:59">
+<testsuite name="The source file" errors="0" tests="7" failures="0" time="0.004" timestamp="2012-11-14T16:35:02">
   <testcase classname="The source file" name="has a function named useXPath" time="0.003"></testcase>
-  <testcase classname="The source file" name="has a function named getArgs" time="0"></testcase>
+  <testcase classname="The source file" name="has a function named getArgs" time="0.001"></testcase>
   <testcase classname="The source file" name="has a function named fetchHTML" time="0"></testcase>
   <testcase classname="The source file" name="has a function named domParse" time="0"></testcase>
   <testcase classname="The source file" name="has a function named elToString" time="0"></testcase>
