@@ -1,0 +1,4 @@
+/node_modules/
+/spec/
+/docs/
+.travis.yml
