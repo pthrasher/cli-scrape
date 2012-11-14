@@ -1,4 +1,4 @@
-#   cli-scrape 0.1.0
+#   cli-scrape 0.1.1
 #
 #   (c) 2012 Philip Thrasher
 #

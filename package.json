@@ -1,7 +1,7 @@
 {
   "name": "cli-scrape",
   "description": "screen scrape from command line with xpath or css selectors",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/pthrasher/scrape",
   "author": {
     "name": "Philip Thrasher",
@@ -34,10 +34,20 @@
     "grunt-contrib-coffee": "~0.3.2",
     "coffee-script": "~1.4.0"
   },
-  "keywords": [],
+  "keywords": [
+      "scrape",
+      "scraper",
+      "scraping",
+      "jquery",
+      "qwery",
+      "css",
+      "selector",
+      "xpath"
+  ],
   "dependencies": {
     "optimist": "~0.3.5",
     "request": "~2.12.0",
     "jsdom": "~0.2.19"
-  }
+  },
+  "preferGlobal": true
 }
