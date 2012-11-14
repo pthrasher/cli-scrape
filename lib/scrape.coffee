@@ -1,4 +1,5 @@
-#    cli-scrape 0.1.4
+#!/usr/bin/env node
+#    cli-scrape 0.1.7
 #
 #    (c) 2012 Philip Thrasher
 #
@@ -135,8 +136,8 @@ executeCSSQuery = (query, window) ->
 # Main
 # ====
 #
-# This is executed by the binary.
-main = ->
+# Only run if we're executed directly.
+if require.main == module
     # Get the args
     { url, query, loglevel } = getArgs()
     # Set our default logging level, only log items at this level and higher.
@@ -190,5 +191,4 @@ module.exports = {
     elToString
     executeXPath
     executeCSSQuery
-    main
 }

@@ -1,7 +1,7 @@
 {
   "name": "cli-scrape",
   "description": "screen scrape from command line with xpath or css selectors",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "homepage": "https://github.com/pthrasher/scrape",
   "author": {
     "name": "Philip Thrasher",
@@ -13,6 +13,9 @@
   },
   "bugs": {
     "url": "https://github.com/pthrasher/cli-scrape/issues"
+  },
+  "bin": {
+      "scrape": "./lib/scrape.js"
   },
   "licenses": [
     {

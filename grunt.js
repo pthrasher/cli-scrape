@@ -28,6 +28,9 @@ module.exports = function(grunt) {
         },
         coffee: {
             compile: {
+                options: {
+                    bare: true
+                },
                 files: {
                     'lib/scrape.js': 'lib/scrape.coffee'
                 }
