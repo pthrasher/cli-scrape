@@ -16,7 +16,7 @@ $ scrape http://whatthecommit.com/ 'p:first-child'
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
 
 ## Release History
-* 0.1.4 - Initial release
+* 0.1.9 - Initial release
   * Supports XPath queries via google's wicked fast xpath library
   * Supports css selector queries using qwery
 
