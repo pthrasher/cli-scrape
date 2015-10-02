@@ -1,3 +1,0 @@
-#!/usr/bin/env node
-var scrape = require('../lib/scrape');
-scrape.main()

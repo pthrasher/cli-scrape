@@ -20,11 +20,17 @@
 request  = require 'request'
 jsdom    = require 'jsdom'
 log      = require 'npmlog'
+path     = require 'path'
+
+absPath = (relPath) ->
+  path.resolve __dirname, relPath
 
 # These are the libraries used to do the parsing on the page. If the query is
 # an xpath query, XPATH\_LIBS is used. If not, CSS\_LIBS is used instead.
-XPATH_LIBS = ['wgxpath.install.js']
-CSS_LIBS = ['qwery.min.js', 'qwery-pseudos.min.js']
+XPATH_LIBS = [absPath('wgxpath.install.js')]
+CSS_LIBS = [absPath('qwery.min.js'), absPath('qwery-pseudos.min.js')]
+
+
 
 # useXPath
 # --------
@@ -63,7 +69,7 @@ getArgs = ->
 fetchHTML = (url, cb) ->
     request.get url, (err, response, body) ->
         if err?
-            log.err 'http', "[#{response.statusCode}] #{err}"
+            log.error 'http', "[#{response.statusCode}] #{err}"
             return cb err, response, body
 
         log.verbose 'http', "[#{response.statusCode}] Fetched '#{url}' successfully."
@@ -76,7 +82,7 @@ fetchHTML = (url, cb) ->
 domParse = (html, libs, cb) ->
     jsdom.env html, libs, (err, window) ->
         if err?
-            log.err 'parse', "Error processing DOM with libs: [ '#{libs.join '\', \''}' ]. (#{err})"
+            log.error 'parse', "Error processing DOM with libs: [ '#{libs.join '\', \''}' ]. (#{err})"
             return cb err, window
 
         log.verbose 'parse', "DOM parse successful with libs: [ '#{libs.join '\', \''}' ]."
@@ -105,7 +111,7 @@ elToString = (el) ->
 # google's wicked fast xpath
 executeXPath = (query, window) ->
     unless window.wgxpath?
-        log.err 'xpath', 'xpath selector engine not found!'
+        log.error 'xpath', 'xpath selector engine not found!'
         return []
     window.wgxpath.install()
     document = window.document
@@ -125,7 +131,7 @@ executeXPath = (query, window) ->
 # window.qwery
 executeCSSQuery = (query, window) ->
     unless window.qwery?
-        log.err 'css', 'qwery selector engine not found!'
+        log.error 'css', 'qwery selector engine not found!'
         return []
     log.verbose 'css', "Evaluating query '#{query}'."
     els = window.qwery query
