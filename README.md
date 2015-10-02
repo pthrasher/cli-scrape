@@ -39,10 +39,14 @@ It's not just you!
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
 
 ## Release History
+* 0.1.10 - Bug fix release
+    * Supports node 4.x
+    * Updated to latest jsdom
+    * Fix for #2
 * 0.1.9 - Initial release
-  * Supports XPath queries via google's wicked fast xpath library
-  * Supports css selector queries using qwery
+    * Supports XPath queries via google's wicked fast xpath library
+    * Supports css selector queries using qwery
 
 ## License
-Copyright (c) 2012 pthrasher  
+Copyright (c) 2012 pthrasher
 Licensed under the MIT license.
